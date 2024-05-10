@@ -1,7 +1,7 @@
 const navLinks = [
     {
         label: "Pokemon",
-        path: "/"
+        path: "/pokemon"
     },
     {
         label: "Location",
@@ -22,9 +22,11 @@ export const NavItems = () => {
                         <li
                             key={ link.path }
                         >
-                            <span className="text-base font-medium leading-normal">
-                                { link.label }
-                            </span>
+                            <a href={ link.path }>
+                                <span className="text-base font-medium leading-normal">
+                                    { link.label }
+                                </span>
+                            </a>
                         </li>
                     )
                 })

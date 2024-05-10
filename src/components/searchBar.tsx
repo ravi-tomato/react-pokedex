@@ -9,7 +9,7 @@ type SearchBarProps = {
 export const SearchBar = (props: SearchBarProps) => {
     return (
         <div className="flex w-full max-w-sm items-center justify-center space-x-2">
-            <Input type="email" placeholder={ props.placeholder } />
+            <Input type="text" placeholder={ props.placeholder } />
             <Button type="submit">Get { props.prompt }</Button>
         </div>
     )
