@@ -1,14 +1,17 @@
-import { useState } from 'react'
 import './App.css'
 import { Navbar } from './components/navbar'
-import { SearchBar } from './components/searchBar'
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider, Router } from 'react-router-dom';
+import { Pokemon } from './pages/pokemon';
+import { Location } from './pages/location';
+import { Items } from './pages/items';
+import { AppRoutes } from './AppRoutes';
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>
       <Navbar />
+      <AppRoutes />
     </>
   )
 }
