@@ -21,6 +21,7 @@ export const NavItems = () => {
                     return (
                         <li
                             key={ link.path }
+                            className="hover:md:t-up"
                         >
                             <a href={ link.path }>
                                 <span className="text-base font-medium leading-normal">
