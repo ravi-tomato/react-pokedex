@@ -1,15 +1,11 @@
 const navLinks = [
     {
+        label: "Home",
+        path: "/"
+    },
+    {
         label: "Pokemon",
-        path: "/pokemon"
-    },
-    {
-        label: "Location",
-        path: "/location"
-    },
-    {
-        label: "Items",
-        path: "/items"
+        path: "/Pokemon"
     }
 ]
 
