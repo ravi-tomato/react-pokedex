@@ -4,7 +4,7 @@ import {
     Routes
   } from "react-router-dom";
 import { Pokemon } from "./pages/pokemon";
-import { Home } from "lucide-react";
+import { Home } from "./pages/home";
 
 export const AppRoutes = () => {
     return (

@@ -1,14 +1,18 @@
 import './App.css'
-import { Navbar } from './components/navbar'
 import { AppRoutes } from './AppRoutes';
+// import { Navbar } from './components/navbar';
+import { ThemeProvider } from './contexts/themeContext';
+import { MainLayout } from './layouts/MainLayout';
 
 function App() {
 
   return (
-    <>
-      <Navbar />
-      <AppRoutes />
-    </>
+    <ThemeProvider>
+      {/* <Navbar /> */}
+      <MainLayout>
+        <AppRoutes />
+      </MainLayout>
+    </ThemeProvider>
   )
 }
 

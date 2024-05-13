@@ -2,10 +2,10 @@ import { NavItems } from "./navItems"
 import PokeLogo from "../assets/pokelogo.svg";
 import { MobileNav } from "./mobileNav";
 import { Moon, Sun } from 'lucide-react'
-import { useDarkTheme } from "@/hooks/useDarkTheme";
+import { useTheme } from "@/hooks/useTheme";
 
 export const Navbar = () => {
-    const [isDark, setIsDark] = useDarkTheme()
+    const { theme, setTheme, isSystemThemeDark } = useTheme()
 
     return (
         <header className="h-20 md:px-10 w-full items-center border-b">
@@ -15,9 +15,9 @@ export const Navbar = () => {
                 </div>
                 <div className="flex justify-between gap-3 md:gap-6">
                     {
-                        isDark ? 
-                            <Sun className="hover:md:-translate-y-1 0.2s ease-out" onClick={ () => setIsDark(false) } /> :
-                            <Moon className="hover:md:-translate-y-1 0.2s ease-out" onClick={ () => setIsDark } />
+                        (isSystemThemeDark() && theme === "dark") ?
+                            <Sun className="hover:md:-translate-y-1 0.2s ease-out" onClick={ () => setTheme("light") } /> :
+                            <Moon className="hover:md:-translate-y-1 0.2s ease-out" onClick={ () => setTheme("dark") } />
                     }
                     <nav className="md:flex-between hidden w-full max-w-xs">
                         <NavItems />
