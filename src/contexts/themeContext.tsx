@@ -27,17 +27,18 @@ export function ThemeProvider({
     defaultTheme = "system"
 } : ThemeProviderProps) {
     const [theme, setTheme] = useState<Theme>(() => localStorage.getItem("theme") as Theme || defaultTheme)
-
+    
     // Every time theme changes, whatever in here gets executed. 
     useEffect(() => {
         const root = window.document.documentElement
-
+        
         root.classList.remove("light", "dark")
         console.log(theme)
         if(theme === "system") {
             const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
                 .matches ? "dark" : "light"
 
+            setTheme(systemTheme)
             root.classList.add(systemTheme)
             return
         }
