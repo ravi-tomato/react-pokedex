@@ -8,7 +8,6 @@ function App() {
 
   return (
     <ThemeProvider>
-      {/* <Navbar /> */}
       <MainLayout>
         <AppRoutes />
       </MainLayout>

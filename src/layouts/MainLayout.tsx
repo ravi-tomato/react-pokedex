@@ -7,9 +7,11 @@ type MainLayoutProps = {
 
 export const MainLayout = ({ children }: MainLayoutProps): JSX.Element => {
     return (
-        <>
+        <div>
             <Navbar />
-            { children }
-        </>
+            <main className="relative wrapper">
+                { children }    
+            </main>
+        </div>
     )
 }
